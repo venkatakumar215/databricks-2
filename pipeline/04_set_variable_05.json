@@ -1,0 +1,39 @@
+{
+	"name": "04_set_variable_05",
+	"properties": {
+		"description": "Generate a dynamic file name",
+		"activities": [
+			{
+				"name": "Set variable3",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "FileName",
+					"value": {
+						"value": "@concat(variables('TableName'), '-',variables('RunDate'))",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"TableName": {
+				"type": "String",
+				"defaultValue": "employees"
+			},
+			"RunDate": {
+				"type": "String",
+				"defaultValue": "2026-10-24"
+			},
+			"FileName": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}

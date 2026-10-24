@@ -1,0 +1,79 @@
+{
+	"name": "04_set_variable_03",
+	"properties": {
+		"description": "Calculate the total salary after adding a bonus",
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "salary",
+					"value": 4000
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "bonus",
+					"value": 5000
+				}
+			},
+			{
+				"name": "Set variable3",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Total Salary",
+					"value": {
+						"value": "@add(variables('salary'),variables('bonus'))",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"salary": {
+				"type": "Integer"
+			},
+			"bonus": {
+				"type": "Integer"
+			},
+			"Total Salary": {
+				"type": "Integer"
+			}
+		},
+		"annotations": []
+	}
+}

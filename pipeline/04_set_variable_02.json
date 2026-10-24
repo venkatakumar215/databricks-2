@@ -1,0 +1,55 @@
+{
+	"name": "04_set_variable_02",
+	"properties": {
+		"description": "Store your name in a variable called EmployeeName.",
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "EmployeeName",
+					"value": "venkat"
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "greeting",
+					"value": {
+						"value": "@concat('Hello ',variables('EmployeeName'))",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"EmployeeName": {
+				"type": "String"
+			},
+			"greeting": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}

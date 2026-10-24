@@ -1,0 +1,34 @@
+{
+	"name": "04_set_variable_04",
+	"properties": {
+		"description": "Store today's date in a variable named RunDate",
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "date",
+					"value": {
+						"value": "@formatDateTime(utcNow(), 'yyyy-MM-dd')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"date": {
+				"type": "String"
+			},
+			"today": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}

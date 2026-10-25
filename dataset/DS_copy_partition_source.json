@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "partition/year=2025",
+				"folderPath": "partition",
 				"fileSystem": "copy-activity"
 			},
 			"columnDelimiter": ",",

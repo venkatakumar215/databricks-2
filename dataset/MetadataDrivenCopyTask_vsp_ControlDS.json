@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_vsp_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Metadriven",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_vsp_20261025"
+		},
+		"annotations": [],
+		"type": "AmazonRdsForSqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "meta_table",
+			"table": "MainControlTable_vsp"
+		}
+	}
+}

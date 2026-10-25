@@ -1,0 +1,23 @@
+{
+	"name": "DS_Copy_list_of_files_with_txt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Copy_file_folder_to_another",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "input_01",
+				"fileSystem": "copy-activity"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

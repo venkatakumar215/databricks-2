@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_hfz_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Metadriven",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_hfz_20261025"
+		},
+		"annotations": [],
+		"type": "AmazonRdsForSqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "practice",
+			"table": "MainControlTable_hfz"
+		}
+	}
+}

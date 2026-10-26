@@ -1,0 +1,36 @@
+{
+	"name": "DS_Lookup_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Lookup_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "emp_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "emp_name",
+				"type": "varchar"
+			},
+			{
+				"name": "department",
+				"type": "varchar"
+			},
+			{
+				"name": "salary",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "practice",
+			"table": "employees"
+		}
+	}
+}

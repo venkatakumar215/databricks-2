@@ -1,0 +1,23 @@
+{
+	"name": "DS_Lookup_gen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Lookup_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "employee.csv",
+				"fileSystem": "lookup-activity"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

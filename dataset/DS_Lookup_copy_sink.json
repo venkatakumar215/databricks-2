@@ -1,0 +1,17 @@
+{
+	"name": "DS_Lookup_copy_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Lookup_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

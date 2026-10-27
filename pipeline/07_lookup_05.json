@@ -1,7 +1,7 @@
 {
 	"name": "07_lookup_05",
 	"properties": {
-		"description": "How can Lookup output control the execution of subsequent activities?",
+		"description": " How can a single pipeline process multiple tables dynamically? ",
 		"activities": [
 			{
 				"name": "LookupTables",

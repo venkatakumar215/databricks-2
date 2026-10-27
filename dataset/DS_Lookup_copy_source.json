@@ -1,0 +1,20 @@
+{
+	"name": "DS_Lookup_copy_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Lookup_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SchemaName": {
+				"type": "string"
+			},
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

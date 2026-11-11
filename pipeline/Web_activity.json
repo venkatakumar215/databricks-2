@@ -1,0 +1,25 @@
+{
+	"name": "Web_activity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"url": "https://prod-23.northcentralus.logic.azure.com:443/workflows/d1d15237adcb4307a62c63d2b3589049/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=mv2KYAkY9dw4XazBuc-YgD1L5dbygOtN_siQ7HfeP28"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

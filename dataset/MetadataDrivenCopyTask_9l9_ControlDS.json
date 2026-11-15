@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_9l9_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Metadriven",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_9l9_20261115"
+		},
+		"annotations": [],
+		"type": "AmazonRdsForSqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "meta_table",
+			"table": "MainControlTable_9l9"
+		}
+	}
+}
